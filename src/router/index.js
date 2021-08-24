@@ -3,7 +3,7 @@
  * @Author: urnotyl
  * @Date: 2021-08-25 00:24:24
  * @LastEditors: urnotyl
- * @LastEditTime: 2021-08-25 01:07:08
+ * @LastEditTime: 2021-08-25 02:05:58
  */
 import Vue from 'vue'
 import Router from 'vue-router'
@@ -46,3 +46,8 @@ const router = new Router({
 })
 
 export default router
+
+// const VueRouterPush = Router.prototype.push
+// Router.prototype.push = function push(to) {
+//   return VueRouterPush.call(this, to).catch(err => err)
+// }
