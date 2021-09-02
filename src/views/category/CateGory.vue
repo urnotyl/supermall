@@ -3,10 +3,10 @@
  * @Author: urnotyl
  * @Date: 2021-08-14 17:28:54
  * @LastEditors: urnotyl
- * @LastEditTime: 2021-08-28 23:17:04
+ * @LastEditTime: 2021-08-30 23:52:47
 -->
 <template>
-  <div class="wrapper" refs="aaa">
+  <div class="wrapper" ref="aaa">
     <ul class="content">
       <li>分类列表1</li>
       <li>分类列表2</li>
@@ -131,7 +131,7 @@ export default {
   mounted() {
     // console.log(docment.querySelector(".wrapper"));
     // console.log(this.$refs.aaa);
-    this.scroll = new BScroll(document.querySelector(".wrapper"), {});
+    this.scroll = new BScroll(this.$refs.aaa, {});
   },
 };
 </script>
@@ -140,6 +140,6 @@ export default {
   height: 150px;
   background-color: cornflowerblue;
   /* 当前设置为scroll时，超出部分自动隐藏（浏览器原生） */
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
 }
 </style>
